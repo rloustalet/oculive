@@ -1,0 +1,67 @@
+[build-system]
+requires = [
+    "setuptools>=61.2",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "Oculive"
+description = "EAA software."
+authors = [
+    { name = "Romain Loustalet Palengat", email = "romain.loustalet@gmx.com" },
+]
+classifiers = [
+    "License :: OSI Approved :: GNU General Public License (GPL)",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Software Development :: Libraries",
+]
+keywords = [
+    "astro",
+    "EAA",
+    "oculive",
+    "live",
+]
+requires-python = ">=3.10"
+dynamic = [
+    "version",
+    "dependencies",
+]
+
+[project.readme]
+file = "README.md"
+content-type = "text/markdown"
+
+[project.urls]
+Homepage = "https://github.com/rloustalet/oculive"
+Source = "https://github.com/rloustalet/oculive"
+
+[project.scripts]
+oculive = "oculive:main"
+
+[tool.setuptools]
+zip-safe = false
+platforms = [
+    "unix",
+    "linux",
+    "osx",
+    "cygwin",
+    "win32",
+]
+license-files = [
+    "LICENSE",
+]
+include-package-data = false
+
+
+[tool.setuptools.package-data]
+
+"oculive" = [
+    "*.ico",
+]
+
+[tool.setuptools.dynamic.version]
+attr = "__init__.__version__"
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["REQUIREMENTS"]}

@@ -1,0 +1,15 @@
+__pycache__
+*.pdf
+*.dat
+*.egg-info
+*.empty
+build
+examples
+.pypirc
+.pylintrc
+dist
+.DS_Store
+_static
+_templates
+.vscode
+.qodo
