@@ -574,3 +574,5 @@ def main():
     window = LiveStacker()
     window.show()
     sys.exit(app.exec())
+
+__version__ = 0.1

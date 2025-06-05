@@ -61,7 +61,7 @@ include-package-data = false
 ]
 
 [tool.setuptools.dynamic.version]
-attr = "__init__.__version__"
+attr = "oculive.__version__"
 
 [tool.setuptools.dynamic]
 dependencies = {file = ["REQUIREMENTS"]}
